@@ -1,0 +1,102 @@
+@use '../abstract' as *;
+
+/*----------------------------------------*/
+/*  00. FOOTER CSS START
+/*----------------------------------------*/
+
+
+.footer{
+    &__widget{
+
+        &-title{
+            padding-top: 5px;
+            font-size: 20px;
+            color: $white;
+            &-2{
+                color: $black;
+            }
+        }
+        &-body{
+            & p{
+                font-size: 16px;
+                line-height: 24px;
+                color: $white;
+                margin-bottom: 30px;
+            }
+            &-2{
+                & p{
+                    color: $white;;
+                }
+            }
+        }
+    }
+
+    &__link{
+        & ul{
+            & li{
+                &:not(:last-child){
+                    margin-bottom: 4px;
+                }
+                & a{
+                    color: $white;
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &-2{
+            & ul{
+                & li{
+                    & a{
+                        color: $e-text-4;
+                        &:hover{
+                            color: $e-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__pl-70{
+        padding-left: 70px;
+        @media #{$lg}{
+            padding-left: 0;
+        }
+        @media #{$md}{
+            padding-left: 0;
+        }
+        @media #{$sm}{
+            padding-left: 0;
+        }
+        @media #{$xs}{
+            padding-left: 0;
+        }
+    }
+    &__bottom{
+        padding: 20px 0;
+        border-top: 1px solid $border-5;
+        &-2{
+            border-color: $border-6;
+        }
+    }
+    &__copyright{
+        & p{
+            font-size: 14px;
+            color: $e-text-6;
+            margin-bottom: 0;
+            & a{
+                color: $white;
+            }
+        }
+        &-2{
+            & p{
+                color: $white;;
+                & a{
+                    color: $e-blue;
+                }
+            }
+        }
+    }
+}

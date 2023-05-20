@@ -1,0 +1,139 @@
+<header class="meals-nav__main">
+  <div class="meals-nav__wrapper">
+    <div class="meals-nav__left">< Go Back</div>
+    <div class="meals-nav__middle">
+      <div class="logo">
+        <img src="assets/img/logo/logo.png" alt="logo" />
+      </div>
+    </div>
+    <div class="meals-nav__right">
+      <div class="header__btn d-none d-lg-block">
+        <button (click)="handleSidebar()" class="e-btn">
+          <img
+            src="assets/img/momIcons/basket-shopping-simple-solid.svg"
+            alt="cart"
+          />
+          <span>14/14 Meals Selected</span>
+        </button>
+      </div>
+      <div class="header__btn d-block d-lg-none">
+        <button (click)="handleSidebar()" class="e-btn" width="40">
+          <img
+            src="assets/img/momIcons/basket-shopping-simple-solid.svg"
+            alt="cart"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- sidebar area start -->
+<div class="sidebar__area" [class.sidebar-opened]="showSidebar">
+  <div class="sidebar__wrapper">
+    <div (click)="handleSidebarClose()" class="sidebar__close">
+      <button class="sidebar__close-btn" id="sidebar__close-btn">
+        <span
+          ><i
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              /></svg></i
+        ></span>
+        <span>close</span>
+      </button>
+    </div>
+    <div class="sidebar__content">
+      <div class="logo mb-40">
+        <button class="e-btn">
+          <img
+            src="assets/img/momIcons/basket-shopping-simple-solid.svg"
+            alt="cart"
+          />
+          <span>14/14 Meals</span>
+        </button>
+      </div>
+
+      <div class="side-info-content sidebar-menu mm-menu">
+        <div class="main-meals-info">
+          <span class="">14/14 Meals</span>
+
+          <div class="delivery-date">
+            <p>Delivery date:</p>
+            <p>Monday, April 24</p>
+          </div>
+        </div>
+    <div class="meals-orderd">
+      <div class="d-flex flex-row order-list">
+        <img src="assets/img/placeholders/orderd.png" alt="placeholder" />
+        <div class="order-details">
+          <p class="oreder-title">Lorem ipsum dolor sit.</p>
+          <p class="remove-order">remove</p>
+          <p class="order-count">
+            <button (click)="handleDecreaseCart('one')">-</button>
+            <span>{{count}}</span>
+            <button (click)="handleAddCart('one')">+</button>
+          </p>
+        </div>
+      </div>
+    </div>
+        <div class="meals-orderd">
+          <div class="d-flex flex-row order-list">
+            <img src="assets/img/placeholders/orderd.png" alt="placeholder" />
+            <div class="order-details">
+              <p class="oreder-title">Lorem ipsum dolor sit.</p>
+              <p class="remove-order">remove</p>
+              <p class="order-count">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="meals-orderd">
+          <div class="d-flex flex-row order-list">
+            <img src="assets/img/placeholders/orderd.png" alt="placeholder" />
+            <div class="order-details">
+              <p class="oreder-title">Lorem ipsum dolor sit.</p>
+              <p class="remove-order">remove</p>
+              <p class="order-count">
+                <button >-</button>
+                <span>1</span>
+                <button >+</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="meals-orderd">
+          <div class="d-flex flex-row order-list">
+            <img src="assets/img/placeholders/orderd.png" alt="placeholder" />
+            <div class="order-details">
+              <p class="oreder-title">Lorem ipsum dolor sit.</p>
+              <p class="remove-order">remove</p>
+              <p class="order-count">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  (click)="handleSidebarClose()"
+  class="body-overlay"
+  [class.opened]="showSidebar"
+></div>
+<!-- sidebar area end -->

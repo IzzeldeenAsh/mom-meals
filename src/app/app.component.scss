@@ -1,0 +1,30 @@
+.main{
+  background-color: antiquewhite;
+  width: 100vh;
+  height: 100vh;
+}
+
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  z-index: 2000;
+  right: 20px;
+  background-color: #d4dde7;
+  border-radius: 40px;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/startups%2Fmessages-solid.svg?alt=media&token=e3b0e588-20b5-405d-ad75-e97ec2d2e695');
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.text {
+  color: #304659;
+}
+

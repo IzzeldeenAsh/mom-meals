@@ -1,0 +1,200 @@
+<header>
+  <div
+    id="header-sticky"
+    class="header__area header__transparent header__padding"
+  >
+    <div class="header__wrapper">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-xxl-3 col-xl-3 col-lg-2 col-md-2 col-sm-4 col-6">
+          <div class="header__left d-flex">
+            <div class="logo">
+              <a [routerLink]="['/']">
+                <img
+                  width="70"
+                  src="../../../assets/img/logo/logo.png"
+                  alt="logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-9 col-xl-9 col-lg-10 col-md-10 col-sm-8 col-6">
+          <div
+            class="header__right d-flex justify-content-end justify-content-xl-around align-items-center"
+          >
+            <div class="main-menu">
+              <nav id="mobile-menu" class="d-none d-lg-block">
+                <ul class="d-flex justify-content-around gap-xl-4">
+                  <li>
+                    <a [routerLink]="['/Orders']">Your Orders</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/Delivery']">Delivery Information</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/meals']">Plan Overview</a>
+                  </li>
+                  <li><a [routerLink]="['/contact']">Customer Support</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="header__btn ml-20 d-none d-lg-block">
+              <button [routerLink]="['/contact']" class="e-btn">
+                Hi, Carol <i class="far fa-user"></i>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown">
+                <ul>
+                  <li>
+                    <a href=""> <i class="far fa-user"></i>Personal Details</a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <i
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-archive"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+                          /></svg
+                      ></i>
+                      Delivery Info</a
+                    >
+                  </li>
+                  <li>
+                    <a href="">
+                      <i
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-funnel"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"
+                          /></svg
+                      ></i>
+                      Dietary Prefrences</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><i class="far fa-plus-square"></i>Benefit Details</a
+                    >
+                  </li>
+                  <li>
+                    <a href="">
+                      <i class="fas fa-sign-out"></i>
+                      Log Out</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar__menu d-lg-none">
+              <div
+                (click)="handleSidebar()"
+                class="sidebar-toggle-btn ml-30"
+                id="sidebar-toggle"
+              >
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- sidebar area start -->
+<div class="sidebar__area" [class.sidebar-opened]="showSidebar">
+  <div class="sidebar__wrapper">
+    <div (click)="handleSidebarClose()" class="sidebar__close">
+      <button class="sidebar__close-btn" id="sidebar__close-btn">
+        <span
+          ><i
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              /></svg></i
+        ></span>
+        <span>close</span>
+      </button>
+    </div>
+    <div class="sidebar__content">
+      <div class="logo mb-40">
+        <a [routerLink]="['/']">
+          <img width="70" src="../../assets/img/logo/logo.png" alt="logo" />
+        </a>
+      </div>
+
+      <div class="side-info-content sidebar-menu mm-menu">
+        <ul>
+          <li>
+            <a>Your Orders</a>
+          </li>
+          <li>
+            <a>Delivery Information</a>
+          </li>
+          <li>
+            <a>Plan Overview</a>
+          </li>
+          <li>
+            <a>Customer Support</a>
+          </li>
+
+          <li
+            class="menu-item-has-children has-droupdown"
+            [class.active]="showmealsDropdown"
+          >
+            <button class="e-btn-sidebar" (click)="mealsDropdown()">
+              More details
+            </button>
+            <ul class="sub-menu" [class.active]="showmealsDropdown">
+              <li>
+                <a [routerLink]="['/Personal-details']">Personal Details</a>
+              </li>
+              <li>
+                <a [routerLink]="['/meals-list']">Delivery Info</a>
+              </li>
+              <li>
+                <a [routerLink]="['/meals-sidebar']">Dietary Preferences </a>
+              </li>
+              <li>
+                <a [routerLink]="['/meal-details']">Benefit Details</a>
+              </li>
+              <li>
+                <a [routerLink]="['/meal-details']"> Log out</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  (click)="handleSidebarClose()"
+  class="body-overlay"
+  [class.opened]="showSidebar"
+></div>
+<!-- sidebar area end -->

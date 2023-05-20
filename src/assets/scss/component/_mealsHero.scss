@@ -1,0 +1,87 @@
+@use "../abstract" as *;
+.meals-hero {
+  &__area {
+    height: 400px;
+    background-color: $main;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__main {
+    text-align: center;
+    position: relative;
+    img {
+      position: absolute;
+      top: -68px;
+      left: -600px;
+    }
+  }
+
+  &__title {
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+
+  &__sub-title {
+    span {
+      font-size: 0.8rem;
+      color: #ffffff;
+    }
+  }
+}
+.meals-preferences {
+  &__area {
+    height: 100px;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__main {
+    text-align: center;
+  }
+
+  &__subtitle {
+    span {
+      font-size: 0.6rem;
+      color: #8298ab;
+    }
+  }
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  background-color: #8298ab;
+  border-radius: 9999px;
+  padding: 4px 8px;
+  margin: 4px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.close-icon {
+  margin-right: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  padding-bottom: 2px;
+}
+
+.close-icon:hover {
+  color: #f00;
+}

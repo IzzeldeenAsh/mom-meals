@@ -1,0 +1,110 @@
+@use "../abstract" as *;
+
+.meals-nav {
+  &__main {
+    background-color: #fff;
+    position: absolute;
+    height: 100px;
+    top: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+  }
+  &__right {
+    margin-left: auto;
+  }
+  &__middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__wrapper {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+  }
+  &__middle {
+    .logo {
+      width: 70px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.e-btn {
+  width: fit-content !important;
+  img {
+    width: 30px;
+    margin: 0 10px;
+  }
+}
+
+.main-meals-info {
+  background-color: $main-light-gray;
+  border-radius: 4px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  span {
+    font-size: 16px;
+  }
+  .delivery-date {
+    margin-left: 35px;
+  }
+
+  p {
+    font-size: 10px;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+.order-list {
+  position: relative;
+  margin: 39px 0;
+  padding: 29px 0;
+  border-bottom: 1px solid $main-light-gray;
+  img {
+    width: 100px;
+  }
+  gap: 10px;
+  .order-details {
+    .oreder-title {
+      font-size: 18px;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .remove-order {
+      color: $grey-13;
+      text-decoration: underline;
+    }
+    .order-count {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70px;
+      padding: 5px;
+      border: 1px solid $main;
+      border-radius: 2px;
+      display: inline-block;
+      button {
+        width: 37%;
+        background: none;
+        &:hover {
+          background-color: $main;
+          color: $white;
+        }
+      }
+    }
+  }
+}

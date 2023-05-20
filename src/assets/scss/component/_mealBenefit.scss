@@ -1,0 +1,164 @@
+@use "../abstract" as *;
+.bg-gray {
+  background-color: $main-light-gray;
+  border-radius: 8px;
+}
+.meal-benfit__title {
+  h2 {
+    color: $main !important;
+  }
+}
+.meal-benefit {
+  position: relative;
+  top: -200px;
+  @media screen and (max-width: 767px) {
+    top: -100px;
+  }
+  &__area {
+    width: 100%;
+    margin: auto;
+    border-radius: 8px;
+    @media ($xs) {
+      margin: 20px 0;
+    }
+  }
+
+  &__main {
+    height: 1200px;
+    width: 80%;
+    margin: auto;
+    background-color: $white;
+    border-radius: 8px;
+
+    @media screen and (min-width: 1800px) {
+      height: 1400px;
+    }
+    @media screen and (max-width: 810px) {
+      height: 1260px;
+    }
+    @media screen and (max-width: 769px) and (min-height: 810px) {
+      height: 1320px;
+    }
+    @media screen and (max-width: 768px) {
+      height: 1100px;
+    }
+    @media screen and (max-width: 525px) {
+      height: 1600px;
+    }
+  }
+  &__head {
+    background-color: $main-light-gray;
+    height: 100px;
+    padding: 50px 0;
+    border-radius: 8px;
+    @media ($xs) {
+      height: 130px;
+    }
+  }
+  &__wrapper {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: -15px;
+  }
+  &__body-left {
+    max-height: 1148px !important;
+    max-width: 2000px !important;
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    width: 100%;
+  }
+  &__details-title {
+    h3 {
+      color: $main;
+      margin: 0 !important;
+    }
+    span {
+      color: $main;
+    }
+  }
+  &__body-right {
+    padding: 0 20px !important;
+  }
+  &__details-description {
+    p {
+      color: $main;
+    }
+    padding: 10px;
+    border-bottom: 1px solid #d0d5d8;
+  }
+  &__details-content {
+    padding-left: 60px;
+    .sub-detail {
+      position: relative;
+    }
+    .sub-details-title {
+      padding: 10px 0;
+      font-weight: 500;
+    }
+    .sub-details-icon {
+      position: absolute;
+      left: -50px;
+      top: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__top {
+    padding: 50px 0;
+    border-bottom: 1px solid #d0d5d8;
+  }
+  &__bottom {
+    .dietary-info-content {
+      position: relative;
+    }
+    .sub-details-icon {
+      img {
+        width: 60px;
+      }
+    }
+  }
+
+  &__paginator {
+    color: $main;
+    display: flex;
+    flex-direction: row;
+    i {
+      margin: 0 10px;
+      color: $main;
+      svg {
+        width: 20px;
+      }
+    }
+    @media (max-width: 680px) {
+      flex-direction: column;
+      span {
+        font-size: 12px;
+        i {
+          svg {
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.how_it_works {
+  @media screen and (min-width: 1150px) {
+    padding-top: 100px;
+  }
+  &__wrapper {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+  &__content {
+    .icon {
+      width: 60px;
+    }
+  }
+}
