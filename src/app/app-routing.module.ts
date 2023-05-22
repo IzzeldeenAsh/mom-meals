@@ -19,6 +19,18 @@ const routes: Routes = [
         (m) => m.ChoosingMealsModule
       ),
   },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'account',
+    loadChildren: () =>
+      import('./pages/account-overview/account-overview.module').then(
+        (m) => m.AccountOverviewModule
+      ),
+  },
 ];
 
 @NgModule({

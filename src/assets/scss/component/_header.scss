@@ -4,7 +4,7 @@
 /*  02. HEADER CSS START
 /*----------------------------------------*/
 header {
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  @include box-shadow(-5px 0 20px -5px rgba(130, 152, 171, 0.4));
 }
 .header {
   &__wrapper {
@@ -559,22 +559,21 @@ header {
 }
 
 .header__btn {
-  &:hover .dropdown {
-    opacity: 1;
-    visibility: visible;
-  }
   position: relative;
+
   .dropdown {
     width: 200px;
     position: absolute;
     background-color: $white;
     opacity: 0;
-    visibility: none;
+    visibility: hidden;
+    display: none;
     @include transition(0.3s);
     left: -65px;
     top: 55px;
     border-radius: 8px;
     @include box-shadow(0px 3px 40px 0px rgba(1, 11, 60, 0.3));
+
     ul {
       padding: 0 !important;
 
@@ -582,21 +581,36 @@ header {
         &:hover {
           background-color: $main-light-gray;
         }
+
         i {
           padding: 0 10px;
         }
+
         a {
           padding: 15px 10px;
           color: $main;
-
           display: block;
         }
+
         &:last-child {
           border-top: 1px solid $grey-13;
         }
       }
     }
   }
+}
+
+.header__btn:hover+.dropdown,
+.dropdown:hover {
+  opacity: 1;
+  display: block;
+  visibility: visible;
+}
+
+.header__Hi_btn:hover+.dropdown {
+  opacity: 1;
+  display: block;
+  visibility: visible;
 }
 
 .e-btn-sidebar {

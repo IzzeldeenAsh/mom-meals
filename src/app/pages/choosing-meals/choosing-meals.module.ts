@@ -8,9 +8,20 @@ import { CoreModule } from 'src/app/core/core.module';
 import { MealsHeroComponent } from './meals-hero/meals-hero.component';
 import { MealsMenuComponent } from './meals-menu/meals-menu.component';
 import { MealsQuestionsComponent } from './meals-questions/meals-questions.component';
+import { RouterModule } from '@angular/router';
+import { MealDetailsComponent } from './meal-details/meal-details.component';
+import { MealsListComponent } from './meals-list/meals-list.component';
 
 @NgModule({
-  declarations: [ChooseYourMealComponent, MealsNavComponent, MealsHeroComponent, MealsMenuComponent, MealsQuestionsComponent],
-  imports: [CommonModule, CoreModule, ChoosingMealsRoutingModule],
+  declarations: [
+    ChooseYourMealComponent,
+    MealsNavComponent,
+    MealsHeroComponent,
+    MealsMenuComponent,
+    MealsQuestionsComponent,
+    MealDetailsComponent,
+    MealsListComponent,
+  ],
+  imports: [CommonModule, CoreModule, ChoosingMealsRoutingModule, RouterModule],
 })
 export class ChoosingMealsModule {}

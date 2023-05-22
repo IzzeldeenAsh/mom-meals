@@ -1,0 +1,50 @@
+<div class="delivery-info pt-50 pb-20">
+  <div class="delivery-info__area account-cards ">
+    <div class="delivery-info__main">
+      <div class="row">
+        <div class="col-12 d-flex head-title">
+          <p>Delivery Address</p>
+        </div>
+        <div class="col-12 delivery-info__description">
+          <p>
+            Curabitur pharetra ligula non libero tempus tincidunt. Ut id erat placerat, pellentesque lectus sed, ornare
+            dolor.
+            Donec
+            ac metus in orci iaculis blandit quis vitae odio.
+          </p>
+          <p>Call XXX-XXX-XXXX to edit or learn more</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="delivery-info pb-20">
+  <div class="delivery-info__area account-cards ">
+    <div class="delivery-info__main">
+      <div class="row">
+        <div class="col-12 d-flex head-title">
+          <p>Delivery Instructions</p>
+            <a (click)="enableEditMode()" style="margin-left: auto;" *ngIf="!editMode">Edit Info</a>
+        </div>
+        <div class="col-12 delivery-info__description" *ngIf="!editMode">
+
+      <p>{{ textInput }}</p>
+        </div>
+        <form (ngSubmit)="onSubmit()" *ngIf="editMode" class="d-flex flex-column">
+          <mat-form-field>
+            <textarea matInput placeholder="Enter your text" [(ngModel)]="textInput" name="textInput" required></textarea>
+
+          </mat-form-field>
+<div class="action-btns">
+  <button mat-button class="cancel-btn presonal-cancel-form" (click)="disableEditMode()">Cancel</button>
+  <button mat-raised-button class=" presonal-save-form" color="primary" type="submit" (click)="disableEditMode()">Save
+    Changes</button>
+</div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>

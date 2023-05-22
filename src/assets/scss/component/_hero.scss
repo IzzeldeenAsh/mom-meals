@@ -30,9 +30,9 @@
     }
   }
   &__title {
-    font-size: 60px;
-    line-height: 1;
-
+    font-family: "SemplicitaProBold" ,sans-serif;
+      font-size: 60px;
+      color:$main;
     @media #{$xl} {
       font-size: 55px;
     }
@@ -89,7 +89,7 @@
       color: $black;
       width: 50%;
       text-align: center;
-      margin: auto;
+      margin: 20px auto;
       line-height: 30px;
       margin-bottom: 28px;
       @media #{$lg} {

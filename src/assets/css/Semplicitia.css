@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'SemplicitaProBold';
+  src: url('../fonts/SemplicitaPro-Bold.otf') format('truetype');
+  /* Add additional src entries for other font formats if necessary */
+  /* For example: src: url('../fonts/YourFontName.woff2') format('woff2'); */
+}
+@font-face {
+  font-family: 'SemplicitaMed';
+  src: url('../fonts/SemplicitaPro-Medium.otf') format('truetype');
+  /* Add additional src entries for other font formats if necessary */
+  /* For example: src: url('../fonts/YourFontName.woff2') format('woff2'); */
+}
+@font-face {
+  font-family: 'SemplicitaProLight';
+  src: url('../fonts/SemplicitaPro-Light.otf') format('truetype');
+  /* Add additional src entries for other font formats if necessary */
+  /* For example: src: url('../fonts/YourFontName.woff2') format('woff2'); */
+}

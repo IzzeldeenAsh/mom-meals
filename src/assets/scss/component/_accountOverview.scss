@@ -1,0 +1,211 @@
+@use '../abstract' as *;
+
+.bg-grey{
+  background-color: $main-bg;
+}
+.account-overview {
+  &__area {
+    width: 80%;
+    margin: auto;
+  }
+
+  &__main {
+    width: 20%;
+    margin-right: auto;
+    @media screen  and (max-width:767px){
+      width: 100%;
+    }
+  }
+
+  &__sidebar {
+    ul {
+      li {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        i{
+          padding: 0 10px;
+        }
+        &::before {
+          content: '';
+          display: inline-block;
+          height: 25px;
+          margin: auto 10px;
+          width: 1px;
+          background-color: $main_grey ;
+          opacity: 0;
+        }
+        a{
+          color: $main;
+        }
+      }
+      li.active{
+        &::before {
+            opacity: 1;
+          }
+      }
+    }
+  }
+  &__content{
+    width: 80%;
+
+  }
+}
+
+.account-cards {
+  width: 80%;
+  margin: auto;
+
+  @media screen and (max-width:767px) {
+    width: 126%;
+  }
+
+  background-color: $white;
+  min-height: 200px;
+  border: 1px solid #EFF3F5;
+  @include box-shadow(0px 40px 80px 0px rgba(2, 2, 26, 0.05));
+  border-radius: 4px;
+}
+.personal-details{
+
+  &__area{
+
+  }
+  &__main{
+
+    padding:40px;
+    .head-title{
+      p{
+        color:$main;
+        font-weight: 700;
+
+      }
+      a{
+        text-decoration: underline !important;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+.info {
+  span {
+    color: $main !important;
+  }
+}
+.id{
+  padding-top: 20px;
+  border-top: 1px solid rgba(2,2,2,0.2);
+}
+
+.edit-info-card {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.edit-info-header {
+  margin-bottom: 20px;
+}
+
+.edit-info-header h2 {
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-input .form-control {
+  padding-right: 35px;
+}
+
+.password-input .password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background-color: #d4dde7;
+  border-radius: 4px;
+}
+
+.personal-details__Form{
+@media ($xs) {
+   overflow: scroll;
+  }
+}
+
+.save-changes-btn {
+  background-color: #304659;
+  border-radius: 4px;
+  color: #fff;
+}
+.name-inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 20px !important;
+  @media ($xs) {
+    flex-direction: column;
+  }
+}
+.password-inputs{
+  display: flex;
+    flex-direction: row;
+    gap: 20px !important;
+    @media ($xs) {
+        flex-direction: column;
+      }
+}
+
+.presonal-cancel-form{
+  background-color: #d4dde7 !important;
+  padding: 20px 30px !important;
+  margin: 0 20px !important;
+}
+
+.presonal-save-form{
+  background-color: $main !important;
+    padding: 20px 30px !important;
+    margin: 0 20px !important;
+}
+
+
+.delivery-info{
+&__main {
+width: 80%;
+margin: auto;
+  padding: 40px;
+  @media screen and (max-width:767px) {
+    width: 100%;
+  }
+}
+&__description{
+  p{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+}
