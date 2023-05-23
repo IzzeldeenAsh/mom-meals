@@ -3,7 +3,7 @@
     <div class="delivery-info__main">
       <div class="row">
         <div class="col-12 d-flex head-title">
-          <p>Delivery Address</p>
+          <p class="roboto bold">Delivery Address</p>
         </div>
         <div class="col-12 delivery-info__description">
           <p>
@@ -24,7 +24,7 @@
     <div class="delivery-info__main">
       <div class="row">
         <div class="col-12 d-flex head-title">
-          <p>Delivery Instructions</p>
+          <p class="roboto bold">Delivery Instructions</p>
             <a (click)="enableEditMode()" style="margin-left: auto;" *ngIf="!editMode">Edit Info</a>
         </div>
         <div class="col-12 delivery-info__description" *ngIf="!editMode">
@@ -42,6 +42,103 @@
     Changes</button>
 </div>
         </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="delivery-info pb-20">
+  <div class="delivery-info__area account-cards ">
+    <div class="delivery-info__main">
+      <div class="row">
+        <div class="col-12 d-flex head-title">
+          <p class="roboto bold">Delivery Dates</p>
+        </div>
+        <div class="col-12 delivery-info__description">
+          <p>Curabitur vel efficitur risus, id scelerisque neque. Donec ultrices tincidunt urna et egestas. Cras ipsum magna,
+            mattis
+            in justo a, rhoncus tempor erat.</p>
+        </div>
+
+        <div class="col-12">
+        <div class="card-container">
+          <mat-card *ngFor="let date of dates; let i = index" class="date-card">
+            <i class="fa-regular fa-calendar"></i>
+            <h3>{{ date | date:'MMMM d' }}</h3>
+            <a  (click)="picker.open()">Edit</a>
+
+            <input matInput [matDatepicker]="picker" [(ngModel)]="dates[i]" (dateChange)="changeDate($event, i)"
+            style="visibility: hidden;"  />
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-card>
+        </div>
+
+
+        </div>
+<div class="col-12 d-flex justify-content-end mt-3">
+  <button mat-raised-button class="save-changes-btn" color="primary" type="submit" (click)="disableEditMode()">Save
+    Changes</button>
+</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="delivery-info pb-20">
+  <div class="delivery-info__area account-cards ">
+    <div class="delivery-info__main">
+      <div class="row">
+        <div class="col-12 d-flex head-title">
+          <p class="roboto bold">Skip a delivery</p>
+        </div>
+        <div class="col-12 delivery-info__description">
+          <p>Curabitur vel efficitur risus, id scelerisque neque.</p>
+        </div>
+
+        <div class="col-12">
+          <div class="card-container">
+           <div class="d-flex flex-column align-items-center">
+            <mat-card class="date-card">
+              <i class="fa-solid fa-cube"></i>
+              <p>Monday</p>
+              <p>May 1</p>
+            </mat-card>
+            <a>Skip</a>
+
+           </div>
+            <div class="d-flex flex-column align-items-center">
+              <mat-card class="date-card">
+                <i class="fa-solid fa-cube"></i>
+                <p>Monday</p>
+                <p>May 1</p>
+              </mat-card>
+              <a>Skip</a>
+            </div>
+              <div class="d-flex flex-column align-items-center">
+                <mat-card class="date-card">
+                  <i class="fa-solid fa-cube"></i>
+                  <p>Monday</p>
+                  <p>May 1</p>
+                </mat-card>
+                <a>Skip</a>
+              </div>
+                <div class="d-flex flex-column align-items-center">
+                  <mat-card class="date-card">
+                    <i class="fa-solid fa-cube"></i>
+                    <p>Monday</p>
+                    <p>May 1</p>
+                  </mat-card>
+                  <a>Skip</a>
+                </div>
+
+          </div>
+<div class="col-12 d-flex justify-content-end mt-3">
+  <button mat-raised-button class="save-changes-btn" color="primary" type="submit" (click)="disableEditMode()">Save
+    Changes</button>
+</div>
+        </div>
 
       </div>
     </div>

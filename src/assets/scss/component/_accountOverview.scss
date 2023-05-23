@@ -36,6 +36,7 @@
           opacity: 0;
         }
         a{
+          text-decoration: none !important;
           color: $main;
         }
       }
@@ -51,6 +52,11 @@
 
   }
 }
+.account-overview__sidebar li a.active {
+  position: relative;
+}
+
+
 
 .account-cards {
   width: 80%;
@@ -194,6 +200,7 @@ label {
 
 
 .delivery-info{
+
 &__main {
 width: 80%;
 margin: auto;
@@ -202,10 +209,135 @@ margin: auto;
     width: 100%;
   }
 }
+
+
 &__description{
   p{
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
   }
 }
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  i{
+    font-size: 20px;
+    color: $main;
+  }
+}
+
+.date-card {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  padding: 1em;
+    box-shadow: none !important;
+      border: 1px solid #cbced1 !important;
+
+      &:hover {
+        background-color: $main-bg;
+      }
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  h3{
+    font-size: 14px;
+    font-weight: 700;
+    color: $main;
+  }
+  a{
+    cursor: pointer;
+    text-decoration: underline !important;
+  }
+}
+
+.date-card mat-icon {
+  font-size: 20px;
+}
+
+
+.save-changes-btn {
+
+
+  background-color: #304659  !important;
+    border-radius: 4px;
+    color: #fff;
+
+}
+
+
+.benefit-details {
+  width: 80%;
+  margin: auto;
+  @media screen and (max-width:767px) {
+      width: 100%;
+    }
+  .card {
+    color: #304659;
+    border: 1px solid #EFF3F5;
+    @include box-shadow(0px 40px 80px 0px rgba(2, 2, 26, 0.05));
+
+    .card-body {
+      width: 80%;
+      margin: auto;
+    }
+    h6{
+      font-weight: 3;
+    }
+  }
+
+  .card-header {
+    background-color: #eef3f7;
+    padding: 35px;
+  }
+
+  .arrow {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  h5,
+  h6 {
+    font-weight: bold;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+.status {
+  font-size: 12px;
+ white-space: break-spaces;
+ word-wrap: break-words;
+}
+}
+
+.chevron-arrows{
+display: inline-block;
+  .back-chevron{
+    width: 20px;
+  }
+  .next-chevron{
+    width: 20px;
+  }
+
+}
+.call-dietray{
+  text-align: center;
+  border-top: 1px solid #b6b7b8 ;
+  padding: 20px 0;
+  p{
+    font-size: 14px;
+  }
 }

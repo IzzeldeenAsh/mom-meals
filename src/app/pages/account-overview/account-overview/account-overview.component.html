@@ -6,37 +6,31 @@
       <div class="account-overview__main">
         <div class="account-overview__sidebar">
           <ul>
-            <li>
+            <li routerLinkActive="active">
               <i class="far fa-user"></i>
-              <a (click)="setActive()" routerLink="personal-details" routerLinkActive="active">Personal Details</a>
+              <a (click)="setActive()" routerLink="personal-details" >Personal Details</a>
             </li>
-            <li>
+            <li routerLinkActive="active">
               <i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive"
-                  viewBox="0 0 16 16">
-                  <!-- Rest of the SVG code -->
-                </svg>
+              <img src="assets/img/momIcons/openBox.svg" alt="box">
               </i>
-              <a (click)="setActive()" routerLink="delivery-info" routerLinkActive="active">Delivery Info</a>
+              <a (click)="setActive()" routerLink="delivery-info" >Delivery Info</a>
             </li>
-            <li>
+            <li  routerLinkActive="active">
               <i class="far fa-plus-square"></i>
-              <a (click)="setActive()" routerLink="benefit-details" routerLinkActive="active">Benefit Details</a>
+              <a (click)="setActive()" routerLink="benefit-details">Benefit Details</a>
             </li>
-            <li>
+            <li routerLinkActive="active">
               <i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel"
-                  viewBox="0 0 16 16">
-                  <!-- Rest of the SVG code -->
-                </svg>
+                <img src="../../../../assets/img/momIcons/Union.svg" alt="Union">
               </i>
-              <a (click)="setActive()" routerLink="dietary-preferences" routerLinkActive="active">Dietary Preferences</a>
+              <a (click)="setActive()" routerLink="dietary-preferences" >Dietary Preferences</a>
             </li>
 
           </ul>
         </div>
       </div>
-      <div class="account-overview__content">
+      <div class="account-overview__content pb-100">
         <router-outlet></router-outlet>
       </div>
     </div>

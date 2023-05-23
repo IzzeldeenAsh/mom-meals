@@ -1,0 +1,10 @@
+::ng-deep .cdk-overlay-pane {
+  transform: translate(-50%, -50%) !important;
+  top: 50% !important;
+  left: 50% !important;
+}
+
+::ng-deep .date-card {
+  width: 100px !important;
+
+}
