@@ -1,0 +1,14 @@
+::ng-deep .shepherd-modal-overlay {
+  background: rgba(0, 0, 0, 0.5) !important;
+  /* change overlay color and opacity */
+}
+
+.shepherd-element {
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.shepherd-button {
+  background-color: #007bff;
+  color: white;
+}

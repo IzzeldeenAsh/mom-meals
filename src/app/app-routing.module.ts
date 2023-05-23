@@ -31,6 +31,13 @@ const routes: Routes = [
         (m) => m.AccountOverviewModule
       ),
   },
+  {
+    path: 'orders',
+    loadChildren: () =>
+      import('./pages/your-orders/your-orders.module').then(
+        (m) => m.YourOrdersModule
+      ),
+  },
 ];
 
 @NgModule({

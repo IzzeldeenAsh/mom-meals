@@ -1,0 +1,19 @@
+@use "../abstract" as *;
+
+.your-orders{
+&__area{
+  background-color: $main-bg;
+  min-height: 100vh;
+}
+&__main{
+  .title{
+    span{
+      font-family: $SempB;
+      display: block !important;
+      margin: auto;
+      font-size: 25px;
+      color:$main
+    }
+  }
+}
+}
