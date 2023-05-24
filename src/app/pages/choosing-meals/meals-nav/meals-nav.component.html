@@ -8,16 +8,16 @@
     </div>
     <div class="meals-nav__right">
       <div class="header__btn d-none d-lg-block">
-        <button (click)="handleSidebar()" class="e-btn">
+        <button (click)="handleSidebar()" class="button-meals">
           <img
-            src="assets/img/momIcons/basket-shopping-simple-solid.svg"
-            alt="cart"
+            src="assets/img/momIcons/basket-shopping-simple-solid.svg" class="pr-5"
+            alt="cart" style="width: 20px;"
           />
           <span>14/14 Meals Selected</span>
         </button>
       </div>
       <div class="header__btn d-block d-lg-none">
-        <button (click)="handleSidebar()" class="e-btn" width="40">
+        <button (click)="handleSidebar()"  class="button-meals" width="40">
           <img
             src="assets/img/momIcons/basket-shopping-simple-solid.svg"
             alt="cart"
@@ -29,41 +29,27 @@
 </header>
 
 <!-- sidebar area start -->
-<div class="sidebar__area" [class.sidebar-opened]="showSidebar">
+<div class="sidebar__area" [class.sidebar-opened]="showSidebar"  >
   <div class="sidebar__wrapper">
-    <div (click)="handleSidebarClose()" class="sidebar__close">
-      <button class="sidebar__close-btn" id="sidebar__close-btn">
-        <span
-          ><i
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-x"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-              /></svg></i
-        ></span>
-        <span>close</span>
-      </button>
-    </div>
-    <div class="sidebar__content">
-      <div class="logo mb-40">
-        <button class="e-btn">
-          <img
-            src="assets/img/momIcons/basket-shopping-simple-solid.svg"
-            alt="cart"
-          />
-          <span>14/14 Meals</span>
-        </button>
+<div class="d-flex justify-content-between">
+      <div class="close-menu-nav">
+        <button (click)="handleSidebarClose()" class="close-menu-side">X</button>
       </div>
+  <div class="logo mb-40">
+    <button class="e-btn">
+      <img src="assets/img/momIcons/basket-shopping-simple-solid.svg" alt="cart" />
+      <span>14/14 Meals</span>
+    </button>
+  </div>
+</div>
+    <div class="sidebar__content position-relative" joyrideStep="step1" title=""
+text="Review and confirm your meals donec dapibus vestibulum urna rhoncus elementum. Praesent tristique sed magna nec consectetur. ">
+
+
 
       <div class="side-info-content sidebar-menu mm-menu">
         <div class="main-meals-info">
-          <span class="">14/14 Meals</span>
+          <span class=""><strong>14/14 Meals</strong></span>
 
           <div class="delivery-date">
             <p>Delivery date:</p>
@@ -74,7 +60,7 @@
       <div class="d-flex flex-row order-list">
         <img src="assets/img/placeholders/orderd.png" alt="placeholder" />
         <div class="order-details">
-          <p class="oreder-title">Lorem ipsum dolor sit.</p>
+          <p class="oreder-title main-color">User Selected Meal Title Goes Here</p>
           <p class="remove-order">remove</p>
           <p class="order-count">
             <button (click)="handleDecreaseCart('one')">-</button>
@@ -88,7 +74,7 @@
           <div class="d-flex flex-row order-list">
             <img src="assets/img/placeholders/orderd.png" alt="placeholder" />
             <div class="order-details">
-              <p class="oreder-title">Lorem ipsum dolor sit.</p>
+              <p class="oreder-title main-color bold museo">User Selected Meal Title Goes Here</p>
               <p class="remove-order">remove</p>
               <p class="order-count">
                 <button>-</button>
@@ -102,7 +88,7 @@
           <div class="d-flex flex-row order-list">
             <img src="assets/img/placeholders/orderd.png" alt="placeholder" />
             <div class="order-details">
-              <p class="oreder-title">Lorem ipsum dolor sit.</p>
+              <p class="oreder-title main-color bold museo">User Selected Meal Title Goes Here</p>
               <p class="remove-order">remove</p>
               <p class="order-count">
                 <button >-</button>
@@ -116,7 +102,7 @@
           <div class="d-flex flex-row order-list">
             <img src="assets/img/placeholders/orderd.png" alt="placeholder" />
             <div class="order-details">
-              <p class="oreder-title">Lorem ipsum dolor sit.</p>
+              <p class="oreder-title main-color bold museo">Lorem ipsum dolor sit.</p>
               <p class="remove-order">remove</p>
               <p class="order-count">
                 <button>-</button>

@@ -5,6 +5,8 @@
 }
 .meal-benfit__title {
   h2 {
+    font-family: $SempB;
+    font-size: 25px;
     color: $main !important;
   }
 }
@@ -65,16 +67,12 @@
     max-height: 1148px !important;
     max-width: 2000px !important;
     img {
-      max-width: 100%;
+      width: 100%;
       border-radius: 8px;
     }
     width: 100%;
   }
   &__details-title {
-    h3 {
-      color: $main;
-      margin: 0 !important;
-    }
     span {
       color: $main;
     }
@@ -83,9 +81,10 @@
     padding: 0 20px !important;
   }
   &__details-description {
-    p {
+
+      font-size: 12px;
       color: $main;
-    }
+
     padding: 10px;
     border-bottom: 1px solid #d0d5d8;
   }
@@ -129,9 +128,7 @@
     i {
       margin: 0 10px;
       color: $main;
-      svg {
-        width: 20px;
-      }
+
     }
     @media (max-width: 680px) {
       flex-direction: column;
@@ -161,4 +158,39 @@
       width: 60px;
     }
   }
+  &__head{
+    .title{
+       h3{
+        font-family: $SempB;
+          font-size: 25px;
+          color: $main !important;
+       }
+    }
+  }
+}
+
+.meal-benefit__details-title{
+  h3{
+    font-family: $Museo;
+    color:$main;
+    font-size: large;
+    font-weight: 900;
+  }
+}
+
+.dietary-informnation-title{
+  h3{
+  font-family: $SempB;
+    font-size: 25px;
+    color: $main !important;
+  }
+}
+.chevron-arrows{
+  i{
+    font-size: 20px;
+  }
+
+}
+.pointer{
+  cursor: pointer;
 }

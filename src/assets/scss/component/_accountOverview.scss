@@ -221,13 +221,23 @@ margin: auto;
 
 .card-container {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   i{
     font-size: 20px;
     color: $main;
   }
+}
+
+.cards-wrapper{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .date-card {
@@ -340,4 +350,20 @@ display: inline-block;
   p{
     font-size: 14px;
   }
+}
+.date-card{
+  i{
+    font-size: 30px;
+  }
+}
+.box-icon{
+  position: relative;
+  font-size: 20px;
+}
+.box-number{
+  position: absolute;
+  left: 11px;
+    top: 15px;
+  font-size: 12px !important;
+  font-family: $SempB;
 }

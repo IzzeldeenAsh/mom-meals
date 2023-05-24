@@ -11,7 +11,7 @@ import { MealsQuestionsComponent } from './meals-questions/meals-questions.compo
 import { RouterModule } from '@angular/router';
 import { MealDetailsComponent } from './meal-details/meal-details.component';
 import { MealsListComponent } from './meals-list/meals-list.component';
-
+import { JoyrideModule } from 'ngx-joyride';
 @NgModule({
   declarations: [
     ChooseYourMealComponent,
@@ -22,6 +22,12 @@ import { MealsListComponent } from './meals-list/meals-list.component';
     MealDetailsComponent,
     MealsListComponent,
   ],
-  imports: [CommonModule, CoreModule, ChoosingMealsRoutingModule, RouterModule],
+  imports: [
+    CommonModule,
+    JoyrideModule.forRoot(),
+    CoreModule,
+    ChoosingMealsRoutingModule,
+    RouterModule,
+  ],
 })
 export class ChoosingMealsModule {}

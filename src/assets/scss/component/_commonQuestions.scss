@@ -19,6 +19,21 @@
   }
   &__left {
     width: 50%;
+    .title{
+      p{
+        font-family: $SempB;
+        color: $main_grey;
+        font-size: 14px;
+        font-weight: 200;
+      }
+    }
+    .head{
+      h3{
+          font-family: $SempB;
+            font-size: 25px;
+            color: $main !important;
+      }
+    }
     .button{
       margin: 20px 0 ;
       background-color: #304659 ;

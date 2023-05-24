@@ -436,11 +436,14 @@
                           Lorem, ipsum dolor.</a
                         >
                       </h3>
-                      <div
-                        class="meal__client d-flex align-items-center justify-content-center"
-                      >
-                        <div class="meal__client-thumb mr-15">
-                          <button class="AddtoCart">Add to Cart</button>
+                      <div class=" d-flex align-items-center justify-content-center">
+                        <div class=" mr-15">
+                          <button *ngIf="!meal.inCart" (click)="addToCart(meal)" class="AddtoCart">Add to Cart</button>
+                          <div *ngIf="meal.inCart" class="counter">
+                            <button (click)="decrement(meal)" class="dec">-</button>
+                            <span>{{ meal.count }}</span>
+                            <button (click)="increment(meal)" class="inc">+</button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -448,7 +451,7 @@
                       class="meal__more d-flex justify-content-end align-items-center"
                     >
                       <div class="meal__btn">
-                        <a [routerLink]="['/meal-details']" class="link-btn">
+                        <a [routerLink]="['/choose-meals/choose/meal-details', 2]" class="link-btn">
                           More Details
                           <i>></i>
                           <i>></i>
@@ -495,7 +498,7 @@
                               <a [routerLink]="['/meal-details']"> </a>
                             </h3>
                             <div class="meal__client d-flex align-items-center">
-                              <div class="meal__client-thumb mr-15"></div>
+                              <div class=" mr-15"></div>
                               <h6>
                                 <a [routerLink]="['/instructor-details']"> </a>
                               </h6>

@@ -42,9 +42,11 @@
             <p>Meal sides: Seasoned Green Beans and Applesauce</p>
             <p>Refer to the label on the entrée for specific heating instructions.</p>
           </div>
-          <div class="add-to-cart-btn">
-            <button class="rectangular-btn" style="margin: 10px 0;">Add to Cart</button>
-          </div>
+      <div class="add-to-cart-btn">
+        <button class="rectangular-btn" style="margin: 10px 0;" (click)="addToCart()">
+          {{ buttonLabel }}
+        </button>
+      </div>
         </div>
       </div>
     </div>

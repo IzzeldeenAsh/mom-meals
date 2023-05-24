@@ -1,0 +1,15 @@
+.meal-benefit__main{
+  height: 650px;
+  @media screen and (min-width: 1800px) {
+      height: 950px;
+    }
+ @media screen and (max-width: 768px) {
+   height: 1000px;
+ }
+    @media screen and (max-width: 500px) {
+      height: 1500px;
+    }
+             @media screen and (max-width: 400px) {
+               height: 1700px;
+             }
+}

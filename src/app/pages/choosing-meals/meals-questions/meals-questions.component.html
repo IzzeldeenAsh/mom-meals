@@ -14,84 +14,227 @@
     </div>
     <div class="common_quetions__right">
       <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              Lorem ipsum dolor sit amet consectetur.
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-              quod ea voluptatum veritatis soluta voluptate porro nostrum
-              debitis doloremque expedita.
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button accordion-head-title" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+           Meals
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <!-- Nested accordion 1 -->
+            <div class="accordion" id="nestedAccordion1">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="nestedHeadingOne1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#nestedCollapseOne1" aria-expanded="true" aria-controls="nestedCollapseOne1">
+                    Nested Accordion 1 - Item 1
+                  </button>
+                </h2>
+                <div id="nestedCollapseOne1" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingOne1"
+                  data-bs-parent="#nestedAccordion1">
+                  <div class="accordion-body">
+                    Nested Accordion 1 - Item 1 Content
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="nestedHeadingTwo1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#nestedCollapseTwo1" aria-expanded="true" aria-controls="nestedCollapseTwo1">
+                    Nested Accordion 1 - Item 2
+                  </button>
+                </h2>
+                <div id="nestedCollapseTwo1" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingTwo1"
+                  data-bs-parent="#nestedAccordion1">
+                  <div class="accordion-body">
+                    Nested Accordion 1 - Item 2 Content
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="nestedHeadingThree1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#nestedCollapseThree1" aria-expanded="true" aria-controls="nestedCollapseThree1">
+                    Nested Accordion 1 - Item 3
+                  </button>
+                </h2>
+                <div id="nestedCollapseThree1" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingThree1"
+                  data-bs-parent="#nestedAccordion1">
+                  <div class="accordion-body">
+                    Nested Accordion 1 - Item 3 Content
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="nestedHeadingFour1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#nestedCollapseFour1" aria-expanded="true" aria-controls="nestedCollapseFour1">
+                    Nested Accordion 1 - Item 4
+                  </button>
+                </h2>
+                <div id="nestedCollapseFour1" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingFour1"
+                  data-bs-parent="#nestedAccordion1">
+                  <div class="accordion-body">
+                    Nested Accordion 1 - Item 4 Content
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
-              Lorem ipsum dolor sit amet.
-            </button>
-          </h2>
-          <div
-            id="collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque a
-              amet magnam placeat non voluptatibus odio neque in esse
-              doloremque?
+      </div>
+
+      <!-- Repeat the above structure for the remaining accordion items -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-head-title accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+            aria-expanded="false" aria-controls="collapseTwo">
+           Delivery
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <!-- Nested accordion 2 -->
+            <div class="accordion" id="nestedAccordion2">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="nestedHeadingOne2">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#nestedCollapseOne2" aria-expanded="true" aria-controls="nestedCollapseOne2">
+                    Nested Accordion 2 - Item 1
+                  </button>
+                </h2>
+                <div id="nestedCollapseOne2" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingOne2"
+                  data-bs-parent="#nestedAccordion2">
+                  <div class="accordion-body">
+                    Nested Accordion 2 - Item 1 Content
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="nestedHeadingTwo2">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#nestedCollapseTwo2" aria-expanded="true" aria-controls="nestedCollapseTwo2">
+                    Nested Accordion 2 - Item 2
+                  </button>
+                </h2>
+                <div id="nestedCollapseTwo2" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingTwo2"
+                  data-bs-parent="#nestedAccordion2">
+                  <div class="accordion-body">
+                    Nested Accordion 2 - Item 2 Content
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="nestedHeadingThree2">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#nestedCollapseThree2" aria-expanded="true" aria-controls="nestedCollapseThree2">
+                    Nested Accordion 2 - Item 3
+                  </button>
+                </h2>
+                <div id="nestedCollapseThree2" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingThree2"
+                  data-bs-parent="#nestedAccordion2">
+                  <div class="accordion-body">
+                    Nested Accordion 2 - Item 3 Content
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="nestedHeadingFour2">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#nestedCollapseFour2" aria-expanded="true" aria-controls="nestedCollapseFour2">
+                    Nested Accordion 2 - Item 4
+                  </button>
+                </h2>
+                <div id="nestedCollapseFour2" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingFour2"
+                  data-bs-parent="#nestedAccordion2">
+                  <div class="accordion-body">
+                    Nested Accordion 2 - Item 4 Content
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree"
-            >
-              Lorem ipsum dolor sit amet.
-            </button>
-          </h2>
-          <div
-            id="collapseThree"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque in, delectus facere voluptatum rem quas mollitia iusto
-              nemo consequatur explicabo.
+      </div>
+
+      <!-- Repeat the above structure for the third accordion item -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed accordion-head-title" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+        aria-expanded="false" aria-controls="collapseThree">
+       Preparation
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+      data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <!-- Nested accordion 3 -->
+        <div class="accordion" id="nestedAccordion3">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="nestedHeadingOne3">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#nestedCollapseOne3" aria-expanded="true" aria-controls="nestedCollapseOne3">
+                Nested Accordion 3 - Item 1
+              </button>
+            </h2>
+            <div id="nestedCollapseOne3" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingOne3"
+              data-bs-parent="#nestedAccordion3">
+              <div class="accordion-body">
+                Nested Accordion 3 - Item 1 Content
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="nestedHeadingTwo3">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#nestedCollapseTwo3" aria-expanded="true" aria-controls="nestedCollapseTwo3">
+                Nested Accordion 3 - Item 2
+              </button>
+            </h2>
+            <div id="nestedCollapseTwo3" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingTwo3"
+              data-bs-parent="#nestedAccordion3">
+              <div class="accordion-body">
+                Nested Accordion 3 - Item 2 Content
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="nestedHeadingThree3">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#nestedCollapseThree3" aria-expanded="true" aria-controls="nestedCollapseThree3">
+                Nested Accordion 3 - Item 3
+              </button>
+            </h2>
+            <div id="nestedCollapseThree3" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingThree3"
+              data-bs-parent="#nestedAccordion3">
+              <div class="accordion-body">
+                Nested Accordion 3 - Item 3 Content
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="nestedHeadingFour3">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#nestedCollapseFour3" aria-expanded="true" aria-controls="nestedCollapseFour3">
+                Nested Accordion 3 - Item 4
+              </button>
+            </h2>
+            <div id="nestedCollapseFour3" class="accordion-collapse collapse show" aria-labelledby="nestedHeadingFour3"
+              data-bs-parent="#nestedAccordion3">
+              <div class="accordion-body">
+                Nested Accordion 3 - Item 4 Content
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
       </div>
     </div>
   </div>

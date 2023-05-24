@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Museo';
+  src: url('../fonts/MuseoSansRounded300.otf') format('truetype');
+  /* Add additional src entries for other font formats if necessary */
+  /* For example: src: url('../fonts/YourFontName.woff2') format('woff2'); */
+}
+

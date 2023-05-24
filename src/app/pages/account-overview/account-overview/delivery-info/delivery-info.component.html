@@ -62,17 +62,22 @@
         </div>
 
         <div class="col-12">
-        <div class="card-container">
-          <mat-card *ngFor="let date of dates; let i = index" class="date-card">
-            <i class="fa-regular fa-calendar"></i>
-            <h3>{{ date | date:'MMMM d' }}</h3>
-            <a  (click)="picker.open()">Edit</a>
+<div class="cards-wrapper">
+  <div *ngFor="let date of dates; let i = index">
+    <div class="card-container">
+      <mat-card class="date-card">
+        <i class="far fa-calendar-edit"></i>
+        <h3>{{ date | date:'MMMM d' }}</h3>
 
-            <input matInput [matDatepicker]="picker" [(ngModel)]="dates[i]" (dateChange)="changeDate($event, i)"
-            style="visibility: hidden;"  />
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-card>
-        </div>
+      </mat-card>
+      <a (click)="picker.open()">Edit</a>
+
+      <input matInput [matDatepicker]="picker" [(ngModel)]="dates[i]" (dateChange)="changeDate($event, i)"
+        style="visibility: hidden;" />
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
+  </div>
+</div>
 
 
         </div>
@@ -98,42 +103,21 @@
         </div>
 
         <div class="col-12">
-          <div class="card-container">
-           <div class="d-flex flex-column align-items-center">
-            <mat-card class="date-card">
-              <i class="fa-solid fa-cube"></i>
-              <p>Monday</p>
-              <p>May 1</p>
-            </mat-card>
-            <a>Skip</a>
+  <div class="cards-wrapper">
+    <div *ngFor="let card of cards" class="d-flex flex-column align-items-center">
+      <mat-card class="date-card" [ngClass]="{ 'skipped': card.isSkipped }">
+        <i class="far fa-box box-icon">
+          <span class="box-number museo">{{ card.id }}</span>
+        </i>
+        <p class="museo bold">{{ card.day }}</p>
+        <p class="museo bold">{{ card.date }}</p>
+        <div class="overlay" *ngIf="card.isSkipped"></div>
+        <div class="line" *ngIf="card.isSkipped"></div>
+      </mat-card>
+      <a (click)="toggleSkip(card)">{{ skipText(card.isSkipped) }}</a>
+    </div>
+  </div>
 
-           </div>
-            <div class="d-flex flex-column align-items-center">
-              <mat-card class="date-card">
-                <i class="fa-solid fa-cube"></i>
-                <p>Monday</p>
-                <p>May 1</p>
-              </mat-card>
-              <a>Skip</a>
-            </div>
-              <div class="d-flex flex-column align-items-center">
-                <mat-card class="date-card">
-                  <i class="fa-solid fa-cube"></i>
-                  <p>Monday</p>
-                  <p>May 1</p>
-                </mat-card>
-                <a>Skip</a>
-              </div>
-                <div class="d-flex flex-column align-items-center">
-                  <mat-card class="date-card">
-                    <i class="fa-solid fa-cube"></i>
-                    <p>Monday</p>
-                    <p>May 1</p>
-                  </mat-card>
-                  <a>Skip</a>
-                </div>
-
-          </div>
 <div class="col-12 d-flex justify-content-end mt-3">
   <button mat-raised-button class="save-changes-btn" color="primary" type="submit" (click)="disableEditMode()">Save
     Changes</button>

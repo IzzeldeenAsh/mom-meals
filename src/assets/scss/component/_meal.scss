@@ -201,7 +201,11 @@
     position: relative;
     height: 100%;
   }
-
+&__btn{
+  a{
+    text-decoration: none !important;
+  }
+}
   &__more {
     padding: 10px 30px;
     padding-top: 15px;
@@ -581,10 +585,14 @@
 
 .AddtoCart {
   border: 1px solid #304659;
-  background: none;
+  background: $white;
   width: 100%;
   color: #304659;
   margin-left: 14px;
   padding: 5px 20px;
   border-radius: 4px;
 }
+.AddtoCart:focus{
+  border: 1px solid #304659;
+}
+

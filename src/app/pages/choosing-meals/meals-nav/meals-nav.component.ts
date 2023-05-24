@@ -1,12 +1,13 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { JoyrideService } from 'ngx-joyride';
 
 @Component({
   selector: 'app-meals-nav',
   templateUrl: './meals-nav.component.html',
   styleUrls: ['./meals-nav.component.scss'],
 })
-export class MealsNavComponent {
-  @Input() header__white: string | undefined;
+export class MealsNavComponent implements OnInit {
+  @Input() openSideBar: boolean | undefined;
 
   headerSticky: boolean = false;
   showCart: boolean = false;
@@ -64,9 +65,36 @@ export class MealsNavComponent {
   }
   handleSidebarClose() {
     this.showSidebar = false;
+    this.joyrideService.closeTour();
   }
 
-  constructor() {}
+  constructor(private readonly joyrideService: JoyrideService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.openSideBar === true) {
+      this.handleSidebar();
+    }
+
+    // Check if the current URL matches the one you want to exclude
+    const currentUrl = window.location.pathname;
+    const excludeUrl = '/choose-meals/choose/meal-details/2';
+
+    if (currentUrl !== excludeUrl) {
+      this.showSidebar = true;
+      const options: any = {
+        steps: ['step1'], // Your steps order
+
+        locale: {
+          // Custom language
+          next: 'Next', // Button text for the next step
+          prev: 'Prev', // Button text for the previous step
+        },
+      };
+      this.joyrideService.startTour(options);
+    }
+  }
+
+  skipTour() {
+    this.joyrideService.closeTour();
+  }
 }

@@ -1,8 +1,29 @@
 <app-header-one></app-header-one>
 <div class="your-orders__area pt-200">
   <div class="your-orders__main">
-   <div class="title"  #tourTarget>
-    <span class="text-center bold" id="step1">Your Orders:</span>
-   </div>
+    <div class="title" joyrideStep="firstStep" title="Page Title" text="Main title!">
+      <span class="text-center bold" id="step1">Your Orders:</span>
+    </div>
+  </div>
+</div>
+
+<!-- Overlay -->
+<div class="overlay">
+  <!-- Dialog -->
+  <div class="dialog">
+    <img src="../../../../assets/img/placeholders/image_placeholder.png" alt="Image"/>
+  <div class="content tour-1">
+      <h2 class="bold">Let's get started</h2>
+      <p class="roboto">Curabitur vel efficitur risus, id scelerisque neque. Donec ultrices tincidunt urna et egestas. Cras ipsum magna,
+        mattis in justo</p>
+        <p><strong>Ready to confirm your first order?</strong></p>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-end pt-10 pb-10 flex-column flex-sm-row align-items-center">
+            <button class="skip-btn">Skip</button>
+            <button class="let-go-btn">Let's go</button>
+          </div>
+        </div>
+  </div>
+
   </div>
 </div>

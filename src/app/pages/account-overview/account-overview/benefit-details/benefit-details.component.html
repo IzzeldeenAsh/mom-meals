@@ -1,91 +1,129 @@
-<div class="benefit-details pb-100 ">
-  <div class="card">
-    <div class="card-header bg-light">
-      <div class="d-flex justify-content-between">
-        <h2 class="m-0">Meal Benefit Information</h2>
-        <div>
+<div class="benefit-details pb-100 pt-200 ">
+<div class="meal-benefit">
+  <div class="meal-benefit__area">
+    <div class="meal-benefit__main">
+      <div class="meal-benefit__head align-items-center">
+        <div class="meal-benefit__wrapper d-flex justify-content-between align-items-center">
+          <div class="meal-benfit__title">
+            <h2>Meal Benefit Information</h2>
+          </div>
+          <div class="meal-benefit__paginator">
+            <span>Benefit {{benefirNumber}} of 2</span>
+            <div class="chevron-arrows">
+              <i class="fas fa-chevron-square-left pointer" style="color: #b3b3b3;" (click)="showBenefit2()"
+                [hidden]="toggleArrow"></i>
+              <i class="far fa-chevron-square-left pointer" (click)="showBenefit2()" [hidden]="!toggleArrow"></i>
+              <i class="far fa-chevron-square-right pointer" (click)="showBenefit1()" [hidden]="toggleArrow"></i>
+              <i class="fas fa-chevron-square-right" style="color: #b3b3b3;" (click)="showBenefit1()"
+                [hidden]="!toggleArrow"></i>
+            </div>
 
-          <span class="mx-2">Benefit 1 of 2</span>
-     <div class="chevron-arrows">
-      <i class="back-chevron pr-5"><img src="assets/img/momIcons/arrow-left-square-fill.svg" alt="arrow"></i>
-      <i class="next-chevron"><img src="assets/img/momIcons/arrow-right-square.svg" alt="arrow"></i>
-     </div>
-      <i></i>
+          </div>
         </div>
 
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="row mb-4">
-        <div class="col-8 col-lg-10">
-          <h2 class="text-right main-color">Meal Benefit #1 Details</h2>
-            <p class="mb-4 main-color roboto">Curabitur vel efficitur risus, id scelerisque neque. Donec ultrices tincidunt urna.
-            </p>
-        </div>
-        <div class="col-lg-2 col-4">
-          <h6 class="text-right main-color status">Status: <span class="bold">Active</span> </h6>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col ">
+        <div class="meal-benefit__body meal-benefit__wrapper pt-20">
+          <div class="row meal-benefit__top">
 
-          <h2 class="main-color">
 
-                <i>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-plus"
-                    viewBox="0 0 16 16">
-                    <path d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z" />
-                    <path
-                      d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
-                  </svg></i>
+            <div class="meal-benefit__body-right  col-12">
+              <div class="d-flex flex-column">
+                <div class="meal-benefit__details-head">
+                  <div class="meal-benefit__details-title align-items-center d-flex pt-10 justify-content-between">
+                    <h3>Meal Benefit #{{benefirNumber}} Details</h3>
+                    <span> status : <strong>{{active}}</strong> <i class="pl-5"><img
+                          src="assets/img/momIcons/check-circle-fill.svg" alt=""></i></span>
+                  </div>
+                  <p class="meal-benefit__details-description">
+                    Curabitur vel efficitur risus, id scelerisque neque. Donec ultrices tincidunt urna et egestas. Cras
+                    ipsum magna, mattis
+                    in justo
+                  </p>
+                </div>
+                <div class="meal-benefit__details-content">
+                  <div class="d-flex flex-column gap-2">
+              <div class="row">
+                      <div class="col-12 col-xl-6 pl-20">
+                        <div class="agency sub-detail">
+                          <div class="sub-details-icon">
+                          <i class="far fa-files-medical" style="font-size: 30px;"></i>
+                          </div>
+                          <div class="sub-details-title bold main-color">
+                            Agency or Health Plan Name
+                          </div>
+                          <div class="sub-details-content museo main-color">
+                            Curabitur vel efficitur risus, id scelerisque neque. Donec ultrices tincidunt urna et egestas.
+                          </div>
+                        </div>
+                      </div>
+                    <div class="col-12 col-xl-6">
+                        <div class="start-end-date sub-detail">
+                          <div class="sub-details-icon"><i class="fal fa-calendar-alt" style="font-size: 35px;"></i></div>
+                          <div class="sub-details-title bold main-color">
+                            Benefit Start/End Date
+                          </div>
+                          <div class="sub-details-content main-color">
+                            April 24 - May 22, 2023
+                          </div>
+                        </div>
+                    </div>
+              </div>
+               <div class="row">
+                <div class="col-12 col-xl-6">
+                  <div class="meal-delivery-progress sub-detail">
+                    <div class="sub-details-icon">
+                      <i class="far fa-box-open" style="font-size: 30px;"></i>
+                    </div>
+                    <div class="sub-details-title museo bold main-color">
+                      <strong>Meal Delivery Progress</strong>
+                    </div>
+                    <div class="sub-details-content museo main-color">
+                      1 of 5 deliveries
+                    </div>
+                    <img width="40"
+                      src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdish.png?alt=media&token=90bcd972-864e-4c81-99c1-4b0978c1ac6d"
+                      alt="" [hidden]="benefit1">
+                    <img width="40"
+                      src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdishgray.png?alt=media&token=058cbb41-4bcb-400b-853a-1ca69128f727"
+                      alt="" [hidden]="benefit1">
+                    <img width="40"
+                      src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdishgray.png?alt=media&token=058cbb41-4bcb-400b-853a-1ca69128f727"
+                      alt="">
+                    <img width="40"
+                      src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdishgray.png?alt=media&token=058cbb41-4bcb-400b-853a-1ca69128f727"
+                      alt="">
+                    <img width="40"
+                      src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdishgray.png?alt=media&token=058cbb41-4bcb-400b-853a-1ca69128f727"
+                      alt="">
+                  </div>
+                </div>
+                <div class="col-12 col-xl-6 pl-10">
+                  <div class="meals-per-week sub-detail">
+                    <div class="sub-details-icon">
 
-              Agency or Health Plane Name</h2>
-          <p class="main-color roboto">Curabitur vel efficitur risus, id scelerisque neque. Donec ultrices tincidunt urna.</p>
-        </div>
-        <div class="col">
+                      <i><img src="../../../../../assets/img/momIcons/14.png" alt="" [hidden]="benefit1"></i>
+                      <i><img src="../../../../../assets/img/momIcons/7.png" alt="" [hidden]="!benefit1"></i>
+                    </div>
+                    <div class="sub-details-title main-color bold">
+                      Meals per Week
+                    </div>
+                    <div class="sub-details-content">
+                      Lorem ipsum dolor, sit amet consectetur a
+                    </div>
+                  </div>
+                </div>
 
-          <h2 class="main-color "><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar3"
-              viewBox="0 0 16 16">
-              <path
-                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
-              <path
-                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-            </svg></i>  Meals Per Week</h2>
-          <p class="main-color roboto">Curabitur vel efficitur risus, id scelerisque neque. Donec ultrices tincidunt urna.</p>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col">
-          <h2 class="main-color "><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar-date"
-              viewBox="0 0 16 16">
-              <path
-                d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z" />
-              <path
-                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-            </svg></i>   Meal Delivery Progress</h2>
-          <p class="main-color roboto">2 of 5 deliveries</p>
-          <img width="40"
-            src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdish.png?alt=media&token=90bcd972-864e-4c81-99c1-4b0978c1ac6d"
-            alt="">
-          <img width="40"
-            src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdishgray.png?alt=media&token=058cbb41-4bcb-400b-853a-1ca69128f727"
-            alt="">
-          <img width="40"
-            src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdishgray.png?alt=media&token=058cbb41-4bcb-400b-853a-1ca69128f727"
-            alt="">
-          <img width="40"
-            src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdishgray.png?alt=media&token=058cbb41-4bcb-400b-853a-1ca69128f727"
-            alt="">
-          <img width="40"
-            src="https://firebasestorage.googleapis.com/v0/b/neue-welt-d499e.appspot.com/o/sectors%2Fdishgray.png?alt=media&token=058cbb41-4bcb-400b-853a-1ca69128f727"
-            alt="">
-        </div>
-        <div class="col">
-          <h2 class="main-color "> <i><img src="assets/img/momIcons/Date_range_duotone.svg" alt="range" width="35"></i> Benefit Start/End Date</h2>
-          <p class="main-color roboto">Curabitur vel efficitur risus, id scelerisque neque. Donec ultrices tincidunt urna.</p>
+                </div>
+               </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 
+
+</div>
 </div>

@@ -11,7 +11,10 @@ export class PersonalDetailsComponent {
   editMode = false;
 
   constructor(private formBuilder: FormBuilder) {}
-
+  first: string = 'Castly';
+  last: string = 'Charlie';
+  email: string = '0000@email.com';
+  password: string = '*****';
   ngOnInit() {
     this.editForm = this.formBuilder.group({
       firstName: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
@@ -53,9 +56,10 @@ export class PersonalDetailsComponent {
   saveChanges() {
     // Handle form submission and saving changes
     if (this.editForm.valid) {
-      // Perform the save operation
-      console.log('Form submitted successfully!');
-      this.disableEditMode();
+      this.first = this.editForm.get('firstName')?.value;
+      this.last = this.editForm.get('lastName')?.value;
+      this.email = this.editForm.get('email')?.value;
+      this.editMode = false;
     } else {
       // Form has validation errors
       console.log('Please fill in the required fields.');

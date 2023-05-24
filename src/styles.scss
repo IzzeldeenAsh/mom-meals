@@ -1,11 +1,11 @@
 
-@import '../src/assets/css/Metromedium.css';
 @import '../src/assets/css/Semplicitia.css';
-@import  "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
- @import "node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+@import '../src/assets/css/Museo.css';
  @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+ @import '../src/assets/css/fontAwesome5Pro.css';
+ @import "~bootstrap/dist/css/bootstrap.css";
 @import '../src/assets/scss/main.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "Museo", sans-serif; }

@@ -1,0 +1,38 @@
+.counter {
+  border-radius: 2px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  margin-left: 12px;
+  border: 1px solid #304659;
+
+  .inc{
+    background: none;
+
+    padding: 0 20px;
+      border-left: 1px solid;
+      height: 42px;
+        &:hover {
+            background: #304659;
+            color: #fff;
+          }
+
+  }
+  .dec{
+
+          background: none;
+
+          padding: 0 20px;
+          border-right: 1px solid;
+          height: 42px;
+
+    &:hover{
+      background: #304659;
+      color:#fff;
+    }
+  }
+  span{
+    padding: 10px 20px;
+  }
+}
